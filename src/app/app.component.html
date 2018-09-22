@@ -1,0 +1,6 @@
+<!--
+кнопка выбора: смотреть с админа или смотреть с юзера -->
+<button (click)="chooseAdmin()">Admin panel</button>  <button (click)="chooseUser()">User panel</button>
+<app-admin *ngIf="adminBlockShow === true"></app-admin>
+<app-user *ngIf="userBlockShow === true"></app-user>
+

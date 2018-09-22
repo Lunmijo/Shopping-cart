@@ -1,0 +1,27 @@
+<div id="wrapper">
+<div class="borders">
+  <p>Welcome to our shop dear public user!</p>
+</div>
+
+<div class="left-bar">
+  <p>Search query:</p>
+  <input type="text" id="searchValue" #searchBox>
+  <p>Filter by category:</p>
+  <div class="filter">
+  <div *ngFor="let categorie of getCategories()">
+      <input type="checkbox"> {{ categorie }}
+    </div>
+  </div>
+  <button type="submit" (click)="search(searchBox.value)">Search</button>
+</div>
+
+
+<div class="main-bar">
+<p>By submiting thes info you agree...</p>
+  <p>Searched for {{ searchElement }}</p>
+  <p>Found total of *24* results</p>
+  <div class="borders">
+    <p>This will be search results</p>
+  </div>
+</div>
+</div>

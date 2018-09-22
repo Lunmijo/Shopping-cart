@@ -1,0 +1,22 @@
+<p>
+  Hello! This is admin interface for product/category module for online shopping cart.
+</p>
+
+<tabs>
+  <tab tabTitle="View products">
+    <li *ngFor="let product of products">
+      <a href="">{{ product }}</a>
+    </li>
+  </tab>
+  <tab tabTitle="View categories">
+    <li *ngFor="let categorie of categories">
+      <a href="">{{ categorie }}</a>
+    </li>
+  </tab>
+  <tab tabTitle="Add a product">
+    Now you cannot add product.
+  </tab>
+  <tab tabTitle="Add a category">
+    Now you cannot add category.
+  </tab>
+  <tabs>

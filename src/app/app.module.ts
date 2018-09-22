@@ -1,0 +1,24 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { TabModule } from 'angular-tabs-component';
+import {AdminComponent} from './admin/admin.component';
+import {AppRoutingModule} from './app-routing.module';
+import {UserComponent} from './user/user.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    AdminComponent,
+    UserComponent
+  ],
+  imports: [
+    BrowserModule,
+    TabModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
