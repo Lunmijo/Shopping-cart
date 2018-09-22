@@ -1,10 +1,10 @@
 <p>
   Hello! This is admin interface for product/category module for online shopping cart.
 </p>
-
+<div id="wrapper">
 <tabs>
   <tab tabTitle="View products">
-    <li *ngFor="let product of products">
+      <li *ngFor="let product of products">
       <a href="">{{ product.product }}</a>
     </li>
   </tab>
@@ -19,4 +19,5 @@
   <tab tabTitle="Add a category">
     Now you cannot add category.
   </tab>
-  <tabs>
+  </tabs>
+</div>

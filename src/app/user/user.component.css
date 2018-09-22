@@ -20,7 +20,9 @@
   overflow: auto;
   margin-bottom: 15px;
 }
-.borders {
+.results {
+  overflow: auto;
+  height: 139px;
   border: 2px solid black;
   margin-bottom: 15px;
   margin-top: 15px;

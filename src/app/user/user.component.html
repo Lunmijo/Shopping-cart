@@ -21,7 +21,7 @@
   <p>Searched for {{ searchElement }}
     <br>Categories {{ checkboxes }}</p>
   <p>Found total of {{ results.length }} results</p>
-  <div class="borders" *ngFor="let result of results">
+  <div class="results" *ngFor="let result of results">
     {{ result }}
   </div>
 </div>
