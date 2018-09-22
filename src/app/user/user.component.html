@@ -8,8 +8,8 @@
   <input type="text" id="searchValue" #searchBox>
   <p>Filter by category:</p>
   <div class="filter">
-  <div *ngFor="let categorie of getCategories()">
-      <input type="checkbox"> {{ categorie }}
+  <div *ngFor="let categorie of getCategories(); let i">
+      <input type="checkbox" (click)="addChecked(categorie)"> {{ categorie }}
     </div>
   </div>
   <button type="submit" (click)="search(searchBox.value)">Search</button>
@@ -18,10 +18,11 @@
 
 <div class="main-bar">
 <p>By submiting thes info you agree...</p>
-  <p>Searched for {{ searchElement }}</p>
-  <p>Found total of *24* results</p>
-  <div class="borders">
-    <p>This will be search results</p>
+  <p>Searched for {{ searchElement }}
+    <br>Categories {{ checkboxes }}</p>
+  <p>Found total of {{ results.length }} results</p>
+  <div class="borders" *ngFor="let result of results">
+    {{ result }}
   </div>
 </div>
 </div>
