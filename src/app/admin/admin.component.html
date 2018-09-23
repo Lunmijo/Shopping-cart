@@ -4,12 +4,12 @@
 <div id="wrapper">
 <tabs>
   <tab tabTitle="View products">
-      <li *ngFor="let product of products">
+      <li *ngFor="let product of getProducts()">
       <a href="">{{ product.product }}</a>
     </li>
   </tab>
   <tab tabTitle="View categories">
-    <li *ngFor="let categorie of categories">
+    <li *ngFor="let categorie of getCategories()">
       <a href="">{{ categorie }}</a>
     </li>
   </tab>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AdminComponent } from '../admin/admin.component';
+import { CommonComponent} from '../common/common.component';
 
 @Component({
   selector: 'app-user',
@@ -12,8 +12,8 @@ export class UserComponent {
   checkboxes = [];
   results = [];
   getCategories() {
-    const temp = new AdminComponent();
-    return temp.categories;
+    const temp = new CommonComponent();
+    return temp.getCategories();
   }
   search(searchValue) {
     this.results = [];

@@ -17,8 +17,4 @@ export class AppComponent {
     this.userBlockShow = true;
     this.adminBlockShow = false;
   }
-  unShowUser() {
-    this.userBlockShow = false;
-  }
-  didNothing() {}
 }
