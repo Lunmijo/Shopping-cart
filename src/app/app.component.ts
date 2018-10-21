@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Data } from './data/data';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   adminBlockShow = false;
   userBlockShow = false;
-
+  data;
+  constructor() {
+    this.data = new Data();
+  }
   chooseAdmin() {
     this.adminBlockShow = true;
     this.userBlockShow = false;
@@ -16,5 +20,8 @@ export class AppComponent {
   chooseUser() {
     this.userBlockShow = true;
     this.adminBlockShow = false;
+  }
+  getData() {
+    return this.data;
   }
 }

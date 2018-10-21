@@ -1,33 +1,34 @@
 #wrapper {
-  clear: both;
-  width: 100%;
-}
-.left-bar {
-  width: 300px;
-  float: left;
-  padding: 5px;
-  border: 2px solid black;
-  display: block;
-}
-.main-bar {
-  padding: 5px;
-  margin: 5px;
-
-  overflow: hidden;
-}
-.filter {
-  height: 100px;
-  overflow: auto;
-  margin-bottom: 15px;
-}
-.results {
-  overflow: auto;
-  height: 139px;
-  border: 2px solid black;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  padding: 3px;
-}
-button {
-  width: 100%;
-}
+    clear: both;
+    width: 100%;
+  }
+  .left-bar {
+    width: 300px;
+    float: left;
+    padding: 5px;
+    border: 1px solid black;
+    display: block;
+  }
+  .main-bar {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+  
+    overflow: hidden;
+  }
+  .filter {
+    height: 100px;
+    overflow: auto;
+    margin-bottom: 15px;
+  }
+  .results {
+    overflow: auto;
+    height: 139px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 3px;
+  }
+  button {
+    width: 100%;
+  }

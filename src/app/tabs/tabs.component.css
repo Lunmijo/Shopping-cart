@@ -1,0 +1,10 @@
+ul li {
+    display: inline;
+    padding: 4px;
+    margin: 0px;
+    border: 1px solid black;
+}
+
+li:hover {
+    cursor: pointer;
+}

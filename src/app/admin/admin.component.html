@@ -1,23 +1,35 @@
-<p>
-  Hello! This is admin interface for product/category module for online shopping cart.
+<p>Hello! This is an admin interface for product/category module for online shopping cart.
 </p>
-<div id="wrapper">
 <tabs>
+  <tab>
+    Select and item to proceed.
+  </tab>
   <tab tabTitle="View products">
-      <li *ngFor="let product of getProducts()">
-      <a href="">{{ product.product }}</a>
+    <li *ngFor="let product of storageProducts()">
+      <a href="">{{ product }}</a>
     </li>
   </tab>
   <tab tabTitle="View categories">
-    <li *ngFor="let categorie of getCategories()">
-      <a href="">{{ categorie }}</a>
-    </li>
+      <li *ngFor="let category of storageCategories()">
+          <a href="">{{ category }}</a>
+        </li>
   </tab>
-  <tab tabTitle="Add a product">
-    Now you cannot add product.
+  <tab tabTitle="Add products">
+    <br>
+    <input required type="text" #product placeholder="Product name"><br>
+    <input required type="text" #price placeholder="Price"><br>
+    <div class="filter">
+      <div *ngFor="let categorie of storageCategories()">
+        <input type="checkbox"  (click)="addCheckbox(categorie)"> {{ categorie }} 
+      </div>
+    </div>
+      <button type="submit" (click)="addProd(product.value, price.value)">Add</button>
+      <button type="submit" (click)="removeProd(product.value)">Remove</button>
   </tab>
-  <tab tabTitle="Add a category">
-    Now you cannot add category.
+  <tab tabTitle="Add categories">
+      <p><input type="text" id="categoryValue" #categoryBox>
+        <button type="submit" style="margin-left:5px;" (click)="addCategory(categoryBox.value)">Add category</button>
+        <button type="submit" style="margin-left:5px;" (click)="removeCategory(categoryBox.value)">Remove category</button>
+      </p>
   </tab>
-  </tabs>
-</div>
+</tabs>

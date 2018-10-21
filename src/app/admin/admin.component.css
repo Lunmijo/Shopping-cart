@@ -1,8 +1,9 @@
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
-tab {
-  height: 300px;
-  overflow: auto;
-  background: repeat;
+.filter {
+    height: 100px;
+    overflow: auto;
+    margin-bottom: 15px;
+    width: 200px;
 }

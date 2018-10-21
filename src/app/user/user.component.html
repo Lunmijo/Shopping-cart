@@ -1,28 +1,30 @@
 <div id="wrapper">
-<div class="borders">
-  <p>Welcome to our shop dear public user!</p>
-</div>
-
-<div class="left-bar">
-  <p>Search query:</p>
-  <input type="text" id="searchValue" #searchBox>
-  <p>Filter by category:</p>
-  <div class="filter">
-  <div *ngFor="let categorie of getCategories(); let i">
-      <input type="checkbox" (click)="addChecked(categorie)"> {{ categorie }}
+  <div class="borders">
+    <p>Welcome to our shop dear public user!</p>
+  </div>
+  
+  <div class="left-bar">
+    <p>Search query:</p>
+    <input type="text" id="searchValue" required #searchBox>
+    <p>Filter by category:</p>
+    <div class="filter">
+    <div *ngFor="let categorie of getCategories()">
+        <input type="checkbox" (click)="addChecked(categorie)"> {{ categorie }}
+      </div>
+    </div>
+    <button type="submit" (click)="search(searchBox.value)">Search</button>
+  </div>
+  
+  
+  <div class="main-bar">
+  <p>By submiting thes info you agree...</p>
+    <p>Searched for {{ searchValue }}
+    <p>Found total of {{ resultsNumber }} results</p>
+    <div class="results">
+      <div  *ngFor="let result of results">
+      {{ result }}
+    </div>
     </div>
   </div>
-  <button type="submit" (click)="search(searchBox.value)">Search</button>
-</div>
-
-
-<div class="main-bar">
-<p>By submiting thes info you agree...</p>
-  <p>Searched for {{ searchElement }}
-    <br>Categories {{ checkboxes }}</p>
-  <p>Found total of {{ results.length }} results</p>
-  <div class="results" *ngFor="let result of results">
-    {{ result }}
   </div>
-</div>
-</div>
+  

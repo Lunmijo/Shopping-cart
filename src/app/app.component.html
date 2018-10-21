@@ -1,4 +1,3 @@
 <button (click)="chooseAdmin()">Admin panel</button>  <button (click)="chooseUser()">User panel</button>
-<app-admin *ngIf="adminBlockShow === true"></app-admin>
-<app-user *ngIf="userBlockShow === true"></app-user>
-
+<admin *ngIf="adminBlockShow === true"></admin>
+<user *ngIf="userBlockShow === true"></user>

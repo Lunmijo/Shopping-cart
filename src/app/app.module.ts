@@ -2,21 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { TabModule } from 'angular-tabs-component';
-import {AdminComponent} from './admin/admin.component';
-import {AppRoutingModule} from './app-routing.module';
-import {UserComponent} from './user/user.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { TabComponent } from './tab/tab.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TabsComponent,
+    TabComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
   ],
   imports: [
-    BrowserModule,
-    TabModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
